@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="squirrel.fdb2.MainActivity"
+    android:background="#868484">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/act_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bg"
+        android:elevation="4dp"
+        app:theme="@style/Toolbar"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginText"
+        android:layout_centerInParent="true"
+        android:translationY="-130dp"
+        android:gravity="center"
+
+        />
+   <EditText
+       android:layout_width="300dp"
+       android:layout_height="50dp"
+       android:id="@+id/un"
+       android:hint="Username"
+       android:layout_centerInParent="true"
+       android:translationY="-60dp"
+       android:textColorHighlight="#9DC23B"
+       android:backgroundTint="#9DC23B"
+       android:textCursorDrawable="@drawable/cursor"/>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/pw"
+        android:hint="Password"
+        android:layout_centerInParent="true"
+        android:inputType="textPassword"
+        android:textColorHighlight="#9DC23B"
+        android:backgroundTint="#9DC23B"
+        android:textCursorDrawable="@drawable/cursor"
+        />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Submit"
+        android:id="@+id/logbutton"
+        android:layout_centerInParent="true"
+        android:translationY="60dp"/>
+
+
+</RelativeLayout>

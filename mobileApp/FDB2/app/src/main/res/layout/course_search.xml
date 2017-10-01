@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:background="#868484"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="squirrel.fdb2.MainActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/act_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bg"
+        android:elevation="4dp"
+        app:theme="@style/Toolbar"
+        android:textColor="#fff"
+        />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="70dp"
+        android:id="@+id/filterCourse1"
+        android:gravity="center_horizontal"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/shape">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Course Title"
+                android:textSize="9pt"
+                android:paddingBottom="5dp"
+                android:textColor="#fff"
+                android:background="#000"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginLeft="2dp"
+                android:paddingLeft="10dp"
+
+
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:hint="...Search"
+                android:textColorHint="#000"
+                android:padding="5dp"
+                android:textSize="9pt"
+                android:id="@+id/cs_field"
+                android:elevation="4dp"
+                android:maxLines="1"
+                android:imeOptions="actionSearch"
+
+                />
+        </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="RESULTS"
+                android:textSize="6pt"
+                android:paddingBottom="5dp"
+                android:textColor="#fff"/>
+            <ListView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/cs_list"
+                android:paddingBottom="50dp"
+                />
+        </LinearLayout>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        app:theme="@style/Toolbar"
+        android:background="#5C5C5C"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/search_courses"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="SEARCH"
+                android:textColor="#fff"
+                android:background="#5C5C5C"
+                android:layout_weight="0.9"
+                />
+            <Button
+                android:id="@+id/my_courses"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="MY COURSES"
+                android:textColor="#fff"
+                android:background="#9DC23B"
+                android:layout_weight="0.9"/>
+            <Button
+                android:id="@+id/logout"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="LOGOUT"
+                android:textColor="#fff"
+                android:background="#9DC23B"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+</RelativeLayout>
+    </LinearLayout>

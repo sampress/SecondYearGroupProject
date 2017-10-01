@@ -1,0 +1,51 @@
+buildscript {
+    repositories {
+        //Required repos
+        mavenCentral()
+        maven { url "http://repo.spring.io/snapshot" }
+        maven { url "http://repo.spring.io/milestone" }
+
+    }
+    dependencies {
+        //Required dependency for spring-boot plugin
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.1.2.BUILD-SNAPSHOT'
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.1.RELEASE")
+
+    }
+
+
+}
+
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'spring-boot'
+apply plugin: 'idea'
+apply plugin: 'maven'
+
+group = 'myGroup'
+// artifactId is taken by default, from folder name
+version = '0.1-SNAPSHOT'
+
+dependencies {
+    compile 'commons-lang:commons-lang:2.3'
+}
+
+
+war {
+    baseName = 'companies'
+    version =  '0.1'
+}
+
+repositories {
+    mavenCentral()
+    maven { url "http://repo.spring.io/snapshot" }
+    maven { url "http://repo.spring.io/milestone" }
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    runtime('org.apache.derby:derby')
+    providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper'
+}

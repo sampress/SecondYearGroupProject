@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="0">
+
+    <TableRow
+        android:background="#5C5C5C">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="30dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="16sp"
+                    android:layout_gravity="bottom"
+                    android:text="Date"
+                    android:textColor="#000"
+                    android:id="@+id/txt"
+                    android:gravity="center"
+                    android:background="#fff"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1"
+                android:layout_weight="0.5"
+                >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"
+                        android:text="Title"
+                        android:textColor="#fff"
+                        android:id="@+id/txt2"
+                        android:gravity="center"
+                        android:layout_margin="20dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Course Description"
+                        android:textColor="#fff"
+                        android:id="@+id/txt3"
+                        android:gravity="center"
+                        android:translationY="-20dp"
+                        android:layout_margin="20dp"
+                        android:maxLength="80"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </TableRow>
+</TableLayout>

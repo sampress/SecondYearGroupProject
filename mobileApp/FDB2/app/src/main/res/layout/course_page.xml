@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#868484">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="squirrel.fdb2.MainActivity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/act_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bg"
+        android:elevation="4dp"
+        app:theme="@style/Toolbar"/>
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:paddingTop="15dp"
+        android:stretchColumns="*"
+        >
+
+
+        <TableRow
+            android:gravity="left"
+            android:paddingLeft="20dp"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                android:text="COURSE NAME"
+                android:id="@+id/course_name"
+                android:textColor="#fff"/>
+
+        </TableRow>
+
+    </TableLayout>
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent">
+
+            <Button
+                android:id="@+id/book_course"
+                android:layout_marginLeft="-30dp"
+                android:text="BOOK COURSE"
+                />
+
+        </TableRow>
+
+        <TextView
+            android:id="@+id/course_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="COURSE DURATION"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/course_capacity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="COURSE CAPACITY"
+            android:textColor="#fff" />
+
+    </TableLayout>
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:stretchColumns="1">
+
+
+            <TableRow
+                android:paddingLeft="20dp"
+                android:layout_width="match_parent"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Example of a paragraph containing a course description of a suitable length as to look appropriate in a user interface displayed on a mobile device."
+                    android:id="@+id/course_description"
+                    android:textColor="#fff"
+                    android:paddingRight="50dp"
+                    android:layout_marginRight="20dp"/>
+
+            </TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text=""
+                android:id="@+id/course_access"
+                android:textColor="#fff"
+                android:layout_marginLeft="20dp"/>
+
+
+
+        </TableLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text=""
+            android:id="@+id/directions"
+            android:textColor="#fff"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text=""
+            android:id="@+id/map_loading"
+            android:textColor="#fff"
+            android:layout_marginLeft="15dp"/>
+
+        <fragment
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="20dp"
+            class="com.google.android.gms.maps.SupportMapFragment" />
+
+
+        <Button
+            android:id="@+id/unbook"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:text="UNBOOK COURSE"
+            android:translationY="2dp"
+            android:layout_weight="0.9"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            />
+
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:stretchColumns="*">
+
+        </TableLayout>
+</LinearLayout>
+
+</ScrollView>
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        app:theme="@style/Toolbar"
+        android:background="#9DC23B"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/search_courses"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="SEARCH"
+                android:textColor="#000000"
+                android:background="#9DC23B"
+                android:layout_weight="0.9"
+                />
+            <Button
+                android:id="@+id/my_courses"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="MY COURSES"
+                android:textColor="#000000"
+                android:background="#9DC23B"
+                android:layout_weight="0.9"/>
+            <Button
+                android:id="@+id/logout"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="LOGOUT"
+                android:textColor="#000000"
+                android:background="#9DC23B"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+    </RelativeLayout>
