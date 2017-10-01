@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1. To setup the database run the following commands in the webApp/ directory
 
 java -jar $DERBY_HOME/lib/derbyrun.jar ij 
@@ -13,3 +14,6 @@ gradle bootRun &
 
 3. In a web browser type the address 0.0.0.0:8080/index
 
+=======
+# SecondYearGroupProject
+>>>>>>> 656cbeecc857cd88095e9e94db684c23c41d1d8d
